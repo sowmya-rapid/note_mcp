@@ -15,6 +15,7 @@ dependencies = [
     "mcp>=1.15.0",
     "pydantic>=2.12.5",
     "smithery>=0.4.2",
+    "uvicorn>=0.30.0",  # [!code highlight] (Add this line)
 ]
 
 [project.scripts]
@@ -25,3 +26,4 @@ playground = "smithery.cli.playground:main" # Run server with interactive testin
 [tool.smithery]
 server = "note_taker.server:create_server" # Function that returns a patched FastMCP server
 log_level = "warning" # Production log level (optional, defaults to "warning")
+uv add uvicorn
